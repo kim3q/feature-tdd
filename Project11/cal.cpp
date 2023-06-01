@@ -20,6 +20,11 @@ public:
 		balance -= money;
 	}
 
+	void Applywelfare()
+	{
+		balance *= 1.05;
+	}
+
 private:
 	int balance = 10000;
 

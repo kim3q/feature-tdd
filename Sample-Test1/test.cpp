@@ -22,3 +22,10 @@ TEST_F(AccountFixture, Withdraw) {
 	account.Withdraw(600);
 	EXPECT_EQ(9400, account.getBalance());
 }
+
+TEST_F(AccountFixture, ApplyWelfare) {
+	account.Applywelfare();
+	EXPECT_EQ(10500, account.getBalance());
+	account.Applywelfare();
+	EXPECT_EQ(11025, account.getBalance());
+}
