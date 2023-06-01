@@ -22,7 +22,7 @@ public:
 
 	void Applywelfare()
 	{
-		balance *= 1.05;
+		balance *= (1 + welfare);
 	}
 
 	void Setwelfare(double setter)
