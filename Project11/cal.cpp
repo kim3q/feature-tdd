@@ -25,7 +25,12 @@ public:
 		balance *= 1.05;
 	}
 
+	void Setwelfare(double setter)
+	{
+		welfare = setter;
+	}
+
 private:
 	int balance = 10000;
-
+	double welfare = 0.05;
 };
