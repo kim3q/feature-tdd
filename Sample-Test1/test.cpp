@@ -37,3 +37,8 @@ TEST_F(AccountFixture, ChangeWelfare) {
 	account.Applywelfare();
 	EXPECT_EQ(11550, account.getBalance());
 }
+
+TEST_F(AccountFixture, PredictWelfare) {
+	account.Setwelfare(0.1);
+	EXPECT_EQ(13310, account.Predictbalance(3));
+}

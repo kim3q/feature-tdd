@@ -22,12 +22,27 @@ public:
 
 	void Applywelfare()
 	{
-		balance *= (1 + welfare);
+		balance = getBalance(balance);
 	}
 
 	void Setwelfare(double setter)
 	{
 		welfare = setter;
+	}
+
+	int Predictbalance(int year)
+	{
+		int expected = balance;
+		for (int i = 0; i < year; i++)
+		{
+			expected = getBalance(expected);
+		}
+		return expected;
+	}
+
+	int getBalance(int balance)
+	{
+		return balance * (1 + welfare);
 	}
 
 private:
